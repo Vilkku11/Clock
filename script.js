@@ -9,5 +9,10 @@ const MyAsyncFunction = async () => {
 
   const Data = await response.json();
   console.log(Data);
+  const time = Data.utc_datetime;
+  const time_offset = Data.utc_offset;
+  document.getElementById("time").textContent = time;
+  var hour = time.getHours();
+  console.log(hour);
 };
 MyAsyncFunction();
